@@ -5,6 +5,8 @@ using System;
 using System.IO;
 using System.Net.NetworkInformation;
 using System.Reflection;
+using Test;
+
 namespace ReportingLibrary
 {
     public class ExtentReportsHelper
@@ -12,12 +14,14 @@ namespace ReportingLibrary
         public ExtentReports extent { get; set; }
         public ExtentV3HtmlReporter reporter { get; set; }
         public ExtentTest test { get; set; }
+        public Browsers browser { get; }
 
 
         public ExtentReportsHelper()
         {
+            browser = new Browsers();
             extent = new ExtentReports();
-            reporter = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/ExtentReport.HTML"); 
+            reporter = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/ExtentReport.HTML"); 
             reporter.Config.ReportName = "Regression Testing";
             reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Standard;
             extent.AttachReporter(reporter);
@@ -25,6 +29,7 @@ namespace ReportingLibrary
             extent.AddSystemInfo("Environment", "QA");
             extent.AddSystemInfo("Machine", Environment.MachineName);
             extent.AddSystemInfo("OS", Environment.OSVersion.VersionString);
+            extent.AddSystemInfo("BrowserPlatform", browser.browserPlatform);
 
         }
 

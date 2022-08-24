@@ -70,6 +70,10 @@
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.4.0, )"
+            },
+            "Selenium.WebDriver.GeckoDriver": {
+              "target": "Package",
+              "version": "[0.31.0.1, )"
             }
           },
           "imports": [

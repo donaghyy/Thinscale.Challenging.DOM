@@ -15,7 +15,8 @@
           "NUnit": "3.13.3",
           "NUnit3TestAdapter": "4.2.1",
           "Selenium.Support": "4.4.0",
-          "Selenium.WebDriver": "4.4.0"
+          "Selenium.WebDriver": "4.4.0",
+          "Selenium.WebDriver.GeckoDriver": "0.31.0.1"
         },
         "runtime": {
           "Thinscale.Challenging.DOM.dll": {}
@@ -1312,6 +1313,7 @@
           }
         }
       },
+      "Selenium.WebDriver.GeckoDriver/0.31.0.1": {},
       "SharpCompress/0.23.0": {
         "dependencies": {
           "System.Text.Encoding.CodePages": "4.5.1"
@@ -2845,6 +2847,13 @@
       "sha512": "sha512-gg/fFUW+SQEdOMaZvkKSau6m4xbMG2qBW6cCW6nGW1CtO0coA8OLYpHcQLpsKcc6q68i/Uq1wjtiVfiNXykJUQ==",
       "path": "selenium.webdriver/4.4.0",
       "hashPath": "selenium.webdriver.4.4.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.GeckoDriver/0.31.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-39nhn8qjgssE/Q/G23m+X9AiVcK71z8hRYmN3yeCVV9LZ9Y/E5s8eAwi6h52KLEnOxqcq23hsV4D4Hu2GYxRJQ==",
+      "path": "selenium.webdriver.geckodriver/0.31.0.1",
+      "hashPath": "selenium.webdriver.geckodriver.0.31.0.1.nupkg.sha512"
     },
     "SharpCompress/0.23.0": {
       "type": "package",

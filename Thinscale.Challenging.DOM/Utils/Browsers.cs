@@ -1,9 +1,12 @@
 ﻿//Browsers.cs
 using AventStack.ExtentReports.Configuration;
+using NUnit.Framework.Internal;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Remote;
 using ReportingLibrary;
+using System;
 using System.Configuration;
 
 
@@ -14,9 +17,15 @@ namespace Test
         public Browsers(ExtentReportsHelper reportsHelper)
         {
             baseURL = "https://the-internet.herokuapp.com/challenging_dom";               //ConfigurationManager.AppSettings["url"];           find out how to setup app config file 
-            browser = "Chrome";                                                           // ConfigurationManager.AppSettings["browser"];
+            browser = "Firefox";                                                           // ConfigurationManager.AppSettings["browser"];
             extentReportsHelper = reportsHelper;
         }
+        public Browsers() // Overloading method so that variables can be used in ExtentReports without extentReportsHelper
+        {
+            baseURL = "https://the-internet.herokuapp.com/challenging_dom";               //ConfigurationManager.AppSettings["url"];           find out how to setup app config file 
+            browser = "Firefox";                 
+        }
+
         private IWebDriver webDriver;
         private string baseURL;
         private string browser;
@@ -54,8 +63,15 @@ namespace Test
             get { return webDriver; }
         }
 
+        public String browserPlatform
+        {
+            get { return browser; }
+        }
 
-        //common operations 
+        //common operations
+
+        
+
         public void Goto(string url)
         {
             webDriver.Url = url;

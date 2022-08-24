@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TBCJk2QO0I7U/fN2/sx8F9eOeokxg+fAfGIF+rPc6DqEasaq09CqYtvbyEiU0UfGyqaNkIhaEWoDY8jeEYHviA==",
+  "dgSpecHash": "8WZsfWYbaXzFyXH5YGJwoaixPId+xyzbmd3/MXP51ppnDoispVajw9+FFOjWbKo9UhLoco2w1/4ajxcqf+2+7g==",
   "success": true,
   "projectFilePath": "/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj",
   "expectedPackageFiles": [
@@ -103,6 +103,7 @@
     "/Users/daviddonaghy/.nuget/packages/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "/Users/daviddonaghy/.nuget/packages/selenium.support/4.4.0/selenium.support.4.4.0.nupkg.sha512",
     "/Users/daviddonaghy/.nuget/packages/selenium.webdriver/4.4.0/selenium.webdriver.4.4.0.nupkg.sha512",
+    "/Users/daviddonaghy/.nuget/packages/selenium.webdriver.geckodriver/0.31.0.1/selenium.webdriver.geckodriver.0.31.0.1.nupkg.sha512",
     "/Users/daviddonaghy/.nuget/packages/sharpcompress/0.23.0/sharpcompress.0.23.0.nupkg.sha512",
     "/Users/daviddonaghy/.nuget/packages/system.appcontext/4.3.0/system.appcontext.4.3.0.nupkg.sha512",
     "/Users/daviddonaghy/.nuget/packages/system.buffers/4.5.0/system.buffers.4.5.0.nupkg.sha512",

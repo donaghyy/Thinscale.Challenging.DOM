@@ -16,6 +16,7 @@
     <PackageReference Include="Selenium.Support" Version="4.4.0" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.31.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +33,7 @@
     <None Remove="DotNetSeleniumExtras.PageObjects.Core" />
     <None Remove="DotNetSeleniumExtras.WaitHelpers" />
     <None Remove="DotNetSeleniumExtras.PageObjects" />
+    <None Remove="Selenium.WebDriver.GeckoDriver" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />
