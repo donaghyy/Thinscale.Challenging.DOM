@@ -17,7 +17,7 @@ namespace ReportingLibrary
         public ExtentReportsHelper()
         {
             extent = new ExtentReports();
-            reporter = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Projects/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/ExtentReport.html"); 
+            reporter = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/ExtentReport.HTML"); 
             reporter.Config.ReportName = "Regression Testing";
             reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Standard;
             extent.AttachReporter(reporter);

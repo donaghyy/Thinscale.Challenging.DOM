@@ -12,7 +12,7 @@ namespace Thinscale.Challenging.DOM.Tests
 	{
 
         [Test]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidatePageHeader()
         {
             Page.verifyPageHeader();
@@ -20,7 +20,7 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateBlueButtonOperation()
         {
             Page.clickOnBlueButton();
@@ -28,14 +28,14 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateRedButtonOperation()
         {
             Page.clickOnRedButton();
         }
 
         [Test]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateGreenButtonOperation()
         {
             Page.clickOnGreenButton();
@@ -79,7 +79,7 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidatePageTitle()
         {
             Page.verifyPageTitle();
