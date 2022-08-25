@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8WZsfWYbaXzFyXH5YGJwoaixPId+xyzbmd3/MXP51ppnDoispVajw9+FFOjWbKo9UhLoco2w1/4ajxcqf+2+7g==",
+  "dgSpecHash": "DXyRuiHXVG8ENvl486m540xCSaBv44KmSkDyXEK3IEBDhTGy7MjiRfhbE3/kg2XhF2nsvs7yxLifxre+MUtSaQ==",
   "success": true,
-  "projectFilePath": "/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj",
+  "projectFilePath": "/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj",
   "expectedPackageFiles": [
     "/Users/daviddonaghy/.nuget/packages/dnsclient/1.2.0/dnsclient.1.2.0.nupkg.sha512",
     "/Users/daviddonaghy/.nuget/packages/dotnetseleniumextras.pageobjects/3.11.0/dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512",

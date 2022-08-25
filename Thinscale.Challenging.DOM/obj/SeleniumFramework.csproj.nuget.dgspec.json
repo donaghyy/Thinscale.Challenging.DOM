@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj": {}
+    "/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj": {}
   },
   "projects": {
-    "/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj": {
+    "/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj",
+        "projectUniqueName": "/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj",
         "projectName": "Thinscale.Challenging.DOM",
-        "projectPath": "/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj",
+        "projectPath": "/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/SeleniumFramework.csproj",
         "packagesPath": "/Users/daviddonaghy/.nuget/packages/",
-        "outputPath": "/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/",
+        "outputPath": "/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/daviddonaghy/.nuget/NuGet/NuGet.Config"
