@@ -40,7 +40,7 @@ namespace Test
                     
                     ChromeOptions options = new ChromeOptions();
                     options.AddArguments("--no-sandbox"); // Bypass OS security model
-                    options.AddArguments("--headless");
+                    //options.AddArguments("--headless");
                     //options.AddArguments("disable-infobars"); // disabling infobars
                     //options.AddArguments("--disable-extensions"); // disabling extensions
                     options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
