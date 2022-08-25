@@ -21,7 +21,8 @@ namespace ReportingLibrary
         {
             browser = new Browsers();
             extent = new ExtentReports();
-            reporter = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/ExtentReport.HTML"); 
+            String timeStamp = (new System.DateTime().ToLongDateString()) + " / " + (new System.DateTime().ToShortTimeString());
+            reporter = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/" + timeStamp + "_ExtentReport.HTML"); 
             reporter.Config.ReportName = "Regression Testing";
             reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Standard;
             extent.AttachReporter(reporter);
@@ -42,13 +43,15 @@ namespace ReportingLibrary
 
         public void SetStepStatusPass(string stepDescription) // Sets Test Step Status to PASS
         {
-            test.Log(Status.Pass, stepDescription);
+            test.Log(Status.Pass, stepDescription); // logs on html report
+            Console.WriteLine("Step Pass: " + stepDescription); // logs to console in realtime
         }
 
 
         public void SetStepStatusWarning(string stepDescription) // Sets Test Step Status to WARNING
         {
             test.Log(Status.Warning, stepDescription);
+            Console.WriteLine("Step Warning: " + stepDescription);
         }
 
 
@@ -83,6 +86,7 @@ namespace ReportingLibrary
         public void LogInfo(String info)
         {
             test.Log(Status.Info, info);
+            Console.WriteLine("info: " + info);
         }
 
 

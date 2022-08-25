@@ -44,10 +44,10 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateStaticTableHeader()
         {
-
+            Page.verifyTableHeaders();
         }
 
         [Test]
@@ -58,10 +58,10 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateRandomEditButton()
         {
-
+            Page.verifyEditButton();
         }
 
         [Test]
