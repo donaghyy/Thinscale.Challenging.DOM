@@ -18,13 +18,13 @@ namespace Test
         public Browsers(ExtentReportsHelper reportsHelper)
         {
             baseURL = "https://the-internet.herokuapp.com/challenging_dom";               //ConfigurationManager.AppSettings["url"];           find out how to setup app config file 
-            browser = "Chrome";                                                           // ConfigurationManager.AppSettings["browser"];
+            browser = "Firefox";                                                           // ConfigurationManager.AppSettings["browser"];
             extentReportsHelper = reportsHelper;
         }
         public Browsers() // Overloading method so that variables can be used in ExtentReports without extentReportsHelper
         {
             baseURL = "https://the-internet.herokuapp.com/challenging_dom";               //ConfigurationManager.AppSettings["url"];           find out how to setup app config file 
-            browser = "Chrome";                 
+            browser = "Firefox";                 
         }
 
         private IWebDriver webDriver;
