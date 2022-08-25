@@ -7,34 +7,40 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-
+  build-test:
+    name: Build & Test
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 3.1
+      - uses: actions/checkout@v2     # checkout the repo
+      - run: npm ci                   # install packages
+      - run: npm test                 # run tests (configured to use jest-junit reporter)
+
+      - name: Test Report
+        uses: phoenix-actions/test-reporting@v8
+        id: test-report               # Set ID reference for step
+        if: success() || failure()    # run this step even if previous step failed
+        with:
+          name: JEST Tests            # Name of the check run which will be created
+          path: reports/jest-*.xml    # Path to test results
+          reporter: jest-junit        # Format of test results
+# jobs:
+#   build:
+
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - uses: actions/checkout@v3
+#     - name: Setup .NET
+#       uses: actions/setup-dotnet@v2
+#       with:
+#         dotnet-version: 3.1
         
-    - name: Restore dependencies
-      run: dotnet restore
+#     - name: Restore dependencies
+#       run: dotnet restore
       
-    - name: Build
-      run: dotnet build --no-restore
+#     - name: Build
+#       run: dotnet build --no-restore
       
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+#     - name: Test
+#       run: dotnet test --no-build --verbosity normal
       
-      - name: Simplecov Report
-  # You may pin to the exact commit or the version.
-  # uses: aki77/simplecov-report-action@aa7e761094e4ae7487959988f26657b1ce3b61e5
-  uses: aki77/simplecov-report-action@v1
-  with:
-    # Failed threshold
-    failedThreshold: # optional, default is 90
-    # json path
-    resultPath: # optional, default is coverage/.last_run.json
-    # Github token
-    token: 
