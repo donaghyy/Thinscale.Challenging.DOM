@@ -32,6 +32,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: main
-        folder: ./test-output/ExtentReport
+        folder: ./Reports/08-25-22/01-55-22_ExtentReport.HTML
       
   
