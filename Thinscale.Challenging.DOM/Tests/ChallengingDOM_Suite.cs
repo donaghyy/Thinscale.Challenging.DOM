@@ -32,6 +32,7 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test]
+        [Ignore("ignore this")]
         public void ValidateGreenButtonOperation()
         {
             Page.clickOnGreenButton();
