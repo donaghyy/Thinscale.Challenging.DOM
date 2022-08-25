@@ -43,7 +43,7 @@ namespace Test
                     options.AddArguments("--headless");
                     //options.AddArguments("disable-infobars"); // disabling infobars
                     //options.AddArguments("--disable-extensions"); // disabling extensions
-                    //options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                    options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 
                     webDriver = new ChromeDriver(options);
                     webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
