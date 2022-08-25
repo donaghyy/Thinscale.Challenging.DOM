@@ -18,13 +18,13 @@ namespace Test
         public Browsers(ExtentReportsHelper reportsHelper)
         {
             baseURL = "https://the-internet.herokuapp.com/challenging_dom";               //ConfigurationManager.AppSettings["url"];           find out how to setup app config file 
-            browser = "Firefox";                                                           // ConfigurationManager.AppSettings["browser"];
+            browser = "Chrome";                                                           // ConfigurationManager.AppSettings["browser"];
             extentReportsHelper = reportsHelper;
         }
         public Browsers() // Overloading method so that variables can be used in ExtentReports without extentReportsHelper
         {
             baseURL = "https://the-internet.herokuapp.com/challenging_dom";               //ConfigurationManager.AppSettings["url"];           find out how to setup app config file 
-            browser = "Firefox";                 
+            browser = "Chrome";                 
         }
 
         private IWebDriver webDriver;
@@ -40,10 +40,10 @@ namespace Test
                     
                     ChromeOptions options = new ChromeOptions();
                     options.AddArguments("--no-sandbox"); // Bypass OS security model
-                    options.AddArguments("--headless");
-                    options.AddArguments("disable-infobars"); // disabling infobars
-                    options.AddArguments("--disable-extensions"); // disabling extensions
-                    options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                    //options.AddArguments("--headless");
+                    //options.AddArguments("disable-infobars"); // disabling infobars
+                    //options.AddArguments("--disable-extensions"); // disabling extensions
+                    //options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 
                     webDriver = new ChromeDriver(options);
                     webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
@@ -53,10 +53,10 @@ namespace Test
 
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     firefoxOptions.AddArguments("--no-sandbox"); // Bypass OS security model
-                    firefoxOptions.AddArguments("--headless");
-                    firefoxOptions.AddArguments("disable-infobars"); // disabling infobars
-                    firefoxOptions.AddArguments("--disable-extensions"); // disabling extensions
-                    firefoxOptions.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                    //firefoxOptions.AddArguments("--headless");
+                    //firefoxOptions.AddArguments("disable-infobars"); // disabling infobars
+                    //firefoxOptions.AddArguments("--disable-extensions"); // disabling extensions
+                    //firefoxOptions.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 
                     webDriver = new FirefoxDriver(firefoxOptions);
                     webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
