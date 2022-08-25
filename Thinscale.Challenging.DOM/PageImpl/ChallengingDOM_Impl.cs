@@ -139,7 +139,7 @@ namespace Thinscale.Challenging.DOM.PageImpl
             String expectedValue2 = "Ipsum";
             String expectedValue3 = "Dolor";
             String expectedValue4 = "Sit";
-            String expectedValue5 = "Ammet"; // Failing on purpose for report demo!
+            String expectedValue5 = "Amet"; 
             String expectedValue6 = "Diceret";
             String expectedValue7 = "Action";
 
