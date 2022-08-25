@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [ "master" ]
 
+        
 jobs:
   build:
 
@@ -17,9 +18,20 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 3.1
+        
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Build
       run: dotnet build --no-restore
+
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
+    - name: Report
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+        branch: main
+        folder: ./Reports/08-25-22/01-55-22_ExtentReport.HTML
+      
+  
