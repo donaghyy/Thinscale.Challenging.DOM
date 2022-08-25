@@ -40,9 +40,9 @@ namespace Test
                     
                     ChromeOptions options = new ChromeOptions();
                     options.AddArguments("--no-sandbox"); // Bypass OS security model
-                    //options.AddArguments("--headless");
-                    //options.AddArguments("disable-infobars"); // disabling infobars
-                    //options.AddArguments("--disable-extensions"); // disabling extensions
+                    options.AddArguments("--headless");
+                    options.AddArguments("disable-infobars"); // disabling infobars
+                    options.AddArguments("--disable-extensions"); // disabling extensions
                     options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 
                     webDriver = new ChromeDriver(options);
@@ -53,10 +53,10 @@ namespace Test
 
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     firefoxOptions.AddArguments("--no-sandbox"); // Bypass OS security model
-                    //firefoxOptions.AddArguments("--headless");
-                    //firefoxOptions.AddArguments("disable-infobars"); // disabling infobars
-                    //firefoxOptions.AddArguments("--disable-extensions"); // disabling extensions
-                    //firefoxOptions.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                    firefoxOptions.AddArguments("--headless");
+                    firefoxOptions.AddArguments("disable-infobars"); // disabling infobars
+                    firefoxOptions.AddArguments("--disable-extensions"); // disabling extensions
+                    firefoxOptions.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 
                     webDriver = new FirefoxDriver(firefoxOptions);
                     webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
