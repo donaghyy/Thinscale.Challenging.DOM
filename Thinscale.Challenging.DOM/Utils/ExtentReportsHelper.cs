@@ -20,9 +20,8 @@ namespace ReportingLibrary
         public ExtentReportsHelper()
         {
             browser = new Browsers();
-            extent = new ExtentReports();
-            String timeStamp = (new System.DateTime().ToLongDateString()) + " / " + (new System.DateTime().ToShortTimeString());
-            reporter = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/" + DateTime.Now.ToString("MM_dd_yy" + " / " + "HH_mm_ss") + "_ExtentReport.HTML"); 
+            extent = new ExtentReports();      // /Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/" + DateTime.Now.ToString("MM_dd_yy" + " / " + "HH_mm_ss") + "_ExtentReport.HTML
+            reporter = new ExtentV3HtmlReporter(@".//Reports/ExtentReport.HTML"); 
             reporter.Config.ReportName = "Regression Testing";
             reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Standard;
             extent.AttachReporter(reporter);
