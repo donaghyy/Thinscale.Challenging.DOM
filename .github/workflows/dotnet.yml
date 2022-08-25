@@ -31,8 +31,8 @@ jobs:
     - name: Report
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
-        GITHUB_TOKEN: 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
-        branch: master
+        GITHUB_TOKEN: ${{ secretes.GITHUB_TOKEN_KEY }}
+        branch: gh-pages
         folder: ./Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Reports/
       
   
