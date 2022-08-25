@@ -17,9 +17,24 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 3.1
+        
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Build
       run: dotnet build --no-restore
+      
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
+      - name: Simplecov Report
+  # You may pin to the exact commit or the version.
+  # uses: aki77/simplecov-report-action@aa7e761094e4ae7487959988f26657b1ce3b61e5
+  uses: aki77/simplecov-report-action@v1
+  with:
+    # Failed threshold
+    failedThreshold: # optional, default is 90
+    # json path
+    resultPath: # optional, default is coverage/.last_run.json
+    # Github token
+    token: 
