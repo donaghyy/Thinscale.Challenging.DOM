@@ -8,6 +8,7 @@ using OpenQA.Selenium.Remote;
 using ReportingLibrary;
 using System;
 using System.Configuration;
+using Thinscale.Challenging.DOM.Utils;
 
 
 namespace Test
@@ -37,6 +38,12 @@ namespace Test
             {
                 case "Chrome":
                     webDriver = new ChromeDriver();
+                    ChromeOptions options = new ChromeOptions();
+                    options.AddArguments("--headless");
+                    options.AddArguments("disable-infobars"); // disabling infobars
+                    options.AddArguments("--disable-extensions"); // disabling extensions
+                    options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                    options.AddArguments("--no-sandbox"); // Bypass OS security model
                     break;
                 case "Firefox":
                     webDriver = new FirefoxDriver();

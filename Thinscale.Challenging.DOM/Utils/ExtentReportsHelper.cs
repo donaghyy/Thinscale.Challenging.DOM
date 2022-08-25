@@ -32,12 +32,7 @@ namespace ReportingLibrary
             extent.AddSystemInfo("OS", Environment.OSVersion.VersionString);
             extent.AddSystemInfo("BrowserPlatform", browser.browserPlatform);
 
-            ChromeOptions options = new ChromeOptions();
-            options.AddArguments("--headless");
-            options.AddArguments("disable-infobars"); // disabling infobars
-            options.AddArguments("--disable-extensions"); // disabling extensions
-            options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-            options.AddArguments("--no-sandbox"); // Bypass OS security model
+            
 
         }
 
