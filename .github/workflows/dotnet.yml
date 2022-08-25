@@ -32,7 +32,7 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         GITHUB_TOKEN: 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
-        branch: main
+        branch: master
         folder: ./Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Reports/
       
   
