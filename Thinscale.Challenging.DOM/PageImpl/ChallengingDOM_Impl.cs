@@ -33,8 +33,92 @@ namespace Thinscale.Challenging.DOM.PageImpl
             _extentReportsHelper = extentReportsHelper;
             driver = webDriver;
         }
-        
 
+
+        public void verifyDeleteButton()
+        {
+
+            elementFetch = new ElementFetch();
+            var deleteButton = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.deleteButtonRow1, driver);
+
+            deleteButton.Click();
+            _extentReportsHelper.SetStepStatusPass("Delete button has been clicked");
+
+            Assert.IsTrue(WebElementHelper.ValidateURLContains(driver, _extentReportsHelper, "#delete", 30), "URL Does not contain #delete");
+
+        }
+
+        public void verifyTableColumns()
+        {
+            String expectedValue1 = "Iuvaret0";
+            String expectedValue2 = "Iuvaret1";
+            String expectedValue3 = "Iuvaret2";
+            String expectedValue4 = "Iuvaret3";
+            String expectedValue5 = "Iuvaret4"; 
+            String expectedValue6 = "Iuvaret5";
+            String expectedValue7 = "Iuvaret6";
+            String expectedValue8 = "Iuvaret7";
+            String expectedValue9 = "Iuvaret8";
+            String expectedValue10 = "Iuvaret9";
+
+
+            elementFetch = new ElementFetch();
+            var tableColumn1 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn1, driver);
+            var tableColumn2 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn2, driver);
+            var tableColumn3 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn3, driver);
+            var tableColumn4 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn4, driver);
+            var tableColumn5 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn5, driver);
+            var tableColumn6 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn6, driver);
+            var tableColumn7 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn7, driver);
+            var tableColumn8 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn8, driver);
+            var tableColumn9 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn9, driver);
+            var tableColumn10 = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.tableColumn10, driver);
+
+
+            String tableColumn1_text = tableColumn1.GetAttribute("innerHTML");
+            String tableColumn2_text = tableColumn2.GetAttribute("innerHTML");
+            String tableColumn3_text = tableColumn3.GetAttribute("innerHTML");
+            String tableColumn4_text = tableColumn4.GetAttribute("innerHTML");
+            String tableColumn5_text = tableColumn5.GetAttribute("innerHTML");
+            String tableColumn6_text = tableColumn6.GetAttribute("innerHTML");
+            String tableColumn7_text = tableColumn7.GetAttribute("innerHTML");
+            String tableColumn8_text = tableColumn8.GetAttribute("innerHTML");
+            String tableColumn9_text = tableColumn9.GetAttribute("innerHTML");
+            String tableColumn10_text = tableColumn10.GetAttribute("innerHTML");
+
+            _extentReportsHelper.test.Log(Status.Info, "Elements aquired, running assertions...");
+
+            Assert.AreEqual(tableColumn1_text, expectedValue1, "Table column 1 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1 as expected: " + tableColumn1_text);
+
+            Assert.AreEqual(tableColumn2_text, expectedValue2, "Table column 2 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 2 as expected: " + tableColumn2_text);
+
+            Assert.AreEqual(tableColumn3_text, expectedValue3, "Table column 3 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 3 as expected: " + tableColumn3_text);
+
+            Assert.AreEqual(tableColumn4_text, expectedValue4, "Table column 4 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 4 as expected: " + tableColumn4_text);
+
+            Assert.AreEqual(tableColumn5_text, expectedValue5, "Table column 5 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 5 as expected: " + tableColumn5_text);
+
+            Assert.AreEqual(tableColumn6_text, expectedValue6, "Table column 6 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 6 as expected: " + tableColumn6_text);
+
+            Assert.AreEqual(tableColumn7_text, expectedValue7, "Table column 7 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 7 as expected: " + tableColumn7_text);
+
+            Assert.AreEqual(tableColumn8_text, expectedValue8, "Table column 8 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 8 as expected: " + tableColumn8_text);
+
+            Assert.AreEqual(tableColumn9_text, expectedValue9, "Table column 9 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 9 as expected: " + tableColumn9_text);
+
+            Assert.AreEqual(tableColumn10_text, expectedValue10, "Table column 10 doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 10 as expected: " + tableColumn10_text);
+
+        }
 
         public void verifyEditButton()
         {
@@ -45,7 +129,7 @@ namespace Thinscale.Challenging.DOM.PageImpl
             editButton.Click();
             _extentReportsHelper.SetStepStatusPass("Edit button has been clicked");
 
-            Assert.IsTrue(WebElementHelper.ValidateURLContains(driver, _extentReportsHelper, "#dit", 30), "URL Does not contain #edit");
+            Assert.IsTrue(WebElementHelper.ValidateURLContains(driver, _extentReportsHelper, "#edit", 30), "URL Does not contain #edit");
             
         }
 

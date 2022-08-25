@@ -22,6 +22,19 @@ namespace Thinscale.Challenging.DOM.PageObjects
 
         public static string editButtonRow1 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[2]/td[7]/a[1]";
 
+        public static string tableColumn1 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[1]/td[1]";
+        public static string tableColumn2 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[2]/td[1]";
+        public static string tableColumn3 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[3]/td[1]";
+        public static string tableColumn4 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[4]/td[1]";
+        public static string tableColumn5 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[5]/td[1]";
+        public static string tableColumn6 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[6]/td[1]";
+        public static string tableColumn7 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[7]/td[1]";
+        public static string tableColumn8 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[8]/td[1]";
+        public static string tableColumn9 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[9]/td[1]";
+        public static string tableColumn10 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[10]/td[1]";
+
+        public static string deleteButtonRow1 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[6]/td[7]/a[2]";
+
 
     }
 }
