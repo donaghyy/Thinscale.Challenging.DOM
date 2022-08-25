@@ -27,9 +27,12 @@ jobs:
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
-
+      
     - name: Report
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
+        GITHUB_TOKEN: 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
         branch: main
         folder: ./Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Reports/
+      
+  
