@@ -45,7 +45,8 @@ namespace Test
                     options.AddArguments("--disable-extensions"); // disabling extensions
                     options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 
-                    webDriver = new ChromeDriver();
+                    webDriver = new ChromeDriver(options);
+                    webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
 
                     break;
                 case "Firefox":
@@ -57,7 +58,8 @@ namespace Test
                     firefoxOptions.AddArguments("--disable-extensions"); // disabling extensions
                     firefoxOptions.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 
-                    webDriver = new FirefoxDriver();
+                    webDriver = new FirefoxDriver(firefoxOptions);
+                    webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
 
                     break;
                 default:
