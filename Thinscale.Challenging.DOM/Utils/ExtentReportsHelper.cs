@@ -1,6 +1,7 @@
 ﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.IO;
 using System.Net.NetworkInformation;
@@ -21,7 +22,7 @@ namespace ReportingLibrary
         {
             browser = new Browsers();
             extent = new ExtentReports();      // /Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/" + DateTime.Now.ToString("MM_dd_yy" + " / " + "HH_mm_ss") + "_ExtentReport.HTML
-            reporter = new ExtentV3HtmlReporter(@".//Reports/ExtentReport.HTML"); 
+            reporter = new ExtentV3HtmlReporter(@"./Reports/ExtentReport.HTML"); 
             reporter.Config.ReportName = "Regression Testing";
             reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Standard;
             extent.AttachReporter(reporter);
@@ -30,6 +31,9 @@ namespace ReportingLibrary
             extent.AddSystemInfo("Machine", Environment.MachineName);
             extent.AddSystemInfo("OS", Environment.OSVersion.VersionString);
             extent.AddSystemInfo("BrowserPlatform", browser.browserPlatform);
+
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("--headless");
 
         }
 
