@@ -32,6 +32,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: main
-        folder: .GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/ExtentReport.HTML
+        folder: .ExtentReport.HTML
       
   
