@@ -16,6 +16,15 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 3.1
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --no-restore
+      
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
 
     - name: Test Report
       uses: phoenix-actions/test-reporting@v8
@@ -25,6 +34,8 @@ jobs:
         name: JEST Tests            # Name of the check run which will be created
         path: reports/jest-*.xml    # Path to test results
         reporter: jest-junit        # Format of test results
+        
+        
 # jobs:
 #   build:
 
