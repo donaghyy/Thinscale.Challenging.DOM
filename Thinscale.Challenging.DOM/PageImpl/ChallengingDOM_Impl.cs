@@ -36,6 +36,19 @@ namespace Thinscale.Challenging.DOM.PageImpl
         }
 
 
+
+
+
+        public void verifyAnswerRefreshes()
+        {
+
+
+
+        }
+
+
+
+
         public void verifyDeleteButton()
         {
 
