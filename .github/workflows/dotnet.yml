@@ -38,7 +38,10 @@ jobs:
       run: dotnet build --no-restore 
 
     - name: Test
-      run: dotnet test --no-build --verbosity normal || true
+      run: dotnet test --no-build --verbosity normal || true 
+      ## Having true at the end means the build
+      ## can still pass when there is a failed test case, it leaves it up to the report to tell you it
+      ## failed
       
     - name: Report
       uses: JamesIves/github-pages-deploy-action@4.1.5
