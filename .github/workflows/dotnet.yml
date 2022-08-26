@@ -47,5 +47,6 @@ jobs:
         branch: gh-pages
         folder: ./Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Reports/
         timezone: Europe/London
+        fail-on-error: false
       
   
