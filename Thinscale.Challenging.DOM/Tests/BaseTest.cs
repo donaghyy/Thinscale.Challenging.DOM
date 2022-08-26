@@ -17,7 +17,7 @@ namespace Thinscale.Challenging.DOM
     [TestFixture] // Denotes this is a test suite
     public abstract class BaseTest
     {
-        protected static IWebDriver driver;
+        protected IWebDriver driver;
         protected Browsers browser;
         protected ChallengingDOM_Impl Page;
         protected ExtentReportsHelper extent;

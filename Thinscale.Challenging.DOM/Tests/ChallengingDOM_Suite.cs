@@ -11,7 +11,8 @@ namespace Thinscale.Challenging.DOM.Tests
     public class ChallengingDOM_Suite : BaseTest
 	{
 
-        [Test, Category("Static_Elements")]
+        [Test]
+        [Category("StaticElement")]
         public void ValidatePageHeader()
         {
             Page.verifyPageHeader();
