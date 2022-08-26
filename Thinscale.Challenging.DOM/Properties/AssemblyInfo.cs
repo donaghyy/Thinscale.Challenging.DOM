@@ -31,4 +31,4 @@ using NUnit.Framework;
 [assembly: Parallelizable(ParallelScope.Children)]
 
 // chose number of browsers
-[assembly: LevelOfParallelism(1)]
+[assembly: LevelOfParallelism(2)]
