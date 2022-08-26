@@ -34,5 +34,6 @@ jobs:
         GITHUB_TOKEN: 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
         branch: gh-pages
         folder: ./Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Reports/
+        timezone: GMT
       
   
