@@ -206,10 +206,10 @@ namespace Thinscale.Challenging.DOM.PageImpl
             elementFetch = new ElementFetch();
             var pageHeader = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.pageHeader, driver);
 
-            String expectedHeader = "Challenging DOM";
+            String expectedHeader = "Challenging DOMM";
             _extentReportsHelper.LogInfo("The page header is: " + pageHeader.GetAttribute("innerHTML"));
 
-            Assert.AreEqual(pageHeader.GetAttribute("innerHTML") != expectedHeader, "Header does not match!" + "\n");
+            Assert.AreEqual(pageHeader.GetAttribute("innerHTML"), expectedHeader, "Header does not match!" + "\n");
         }
 
         public void verifyPageTitle()

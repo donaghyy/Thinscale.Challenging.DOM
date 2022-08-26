@@ -27,14 +27,14 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test, Category("Buttons")]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateRedButtonOperation()
         {
             Page.clickOnRedButton();
         }
 
         [Test, Category("Buttons")]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateGreenButtonOperation()
         {
             Page.clickOnGreenButton();
@@ -42,28 +42,28 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test, Category("Static_Elements")]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateStaticTableHeader()
         {
             Page.verifyTableHeaders();
         }
 
         [Test, Category("Static_Elements")]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateRandomTableCollumn()
         {
             Page.verifyTableColumns();
         }
 
         [Test, Category("Buttons")]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateRandomEditButton()
         {
             Page.verifyEditButton();
         }
 
         [Test, Category("Buttons")]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidateRandomDeleteButton()
         {
             Page.verifyDeleteButton();
@@ -77,7 +77,7 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test, Category("Static_Elements")]
-        [Ignore("x")]
+        //[Ignore("x")]
         public void ValidatePageTitle()
         {
             Page.verifyPageTitle();
