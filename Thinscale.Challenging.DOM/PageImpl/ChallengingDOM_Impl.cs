@@ -209,7 +209,7 @@ namespace Thinscale.Challenging.DOM.PageImpl
             String expectedHeader = "Challenging DOM";
             _extentReportsHelper.LogInfo("The page header is: " + pageHeader.GetAttribute("innerHTML"));
 
-            Assert.Equals(pageHeader.GetAttribute("innerHTML") != expectedHeader, "Header does not match!" + "\n");
+            Assert.AreEqual(pageHeader.GetAttribute("innerHTML") != expectedHeader, "Header does not match!" + "\n");
         }
 
         public void verifyPageTitle()
