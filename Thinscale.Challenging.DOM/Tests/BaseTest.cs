@@ -57,6 +57,8 @@ namespace Thinscale.Challenging.DOM
                     case TestStatus.Failed:
                         extent.SetTestStatusFail($"<br>{errorMessage}<br>Stack Trace: <br>{stacktrace}<br>");
                         extent.AddTestFailureScreenshot(browser.getDriver.ScreenCaptureAsBase64String());
+                        string screenshot = ("./" + browser.getDriver.ScreenCaptureAsBase64String());
+                        extent.LogInfo("Screenshot captured");
                         break;
                     case TestStatus.Skipped:
                         extent.SetTestStatusSkipped();

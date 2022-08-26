@@ -23,6 +23,7 @@ namespace Thinscale.Challenging.DOM.Tests
         public void ValidateBlueButtonOperation()
         {
             Page.clickOnBlueButton();
+            extent.SetTestStatusSkipped();
 
         }
 
