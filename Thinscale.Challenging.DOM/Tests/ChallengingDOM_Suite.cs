@@ -11,67 +11,65 @@ namespace Thinscale.Challenging.DOM.Tests
     public class ChallengingDOM_Suite : BaseTest
 	{
 
-        [Test]
+        [Test, Category("Static_Elements")]
         public void ValidatePageHeader()
         {
             Page.verifyPageHeader();
 
         }
 
-        [Test]
+        [Test, Category("Buttons")]
         public void ValidateBlueButtonOperation()
         {
             Page.clickOnBlueButton();
 
         }
 
-        [Test]
+        [Test, Category("Buttons")]
         public void ValidateRedButtonOperation()
         {
             Page.clickOnRedButton();
         }
 
-        [Test]
-        [Ignore("ignore this")]
+        [Test, Category("Buttons")]
         public void ValidateGreenButtonOperation()
         {
             Page.clickOnGreenButton();
 
-            //Thread.Sleep(2000);
         }
 
-        [Test]
+        [Test, Category("Static_Elements")]
         public void ValidateStaticTableHeader()
         {
             Page.verifyTableHeaders();
         }
 
-        [Test]
+        [Test, Category("Static_Elements")]
         public void ValidateRandomTableCollumn()
         {
             Page.verifyTableColumns();
         }
 
-        [Test]
+        [Test, Category("Buttons")]
         public void ValidateRandomEditButton()
         {
             Page.verifyEditButton();
         }
 
-        [Test]
+        [Test, Category("Buttons")]
         public void ValidateRandomDeleteButton()
         {
             Page.verifyDeleteButton();
         }
 
-        [Test]
+        [Test, Category("Static_Elements")]
         [Ignore("x")]
         public void ValidateAnswerFieldRefreshes()
         {
 
         }
 
-        [Test]
+        [Test, Category("Static_Elements")]
         //[Ignore("x")]
         public void ValidatePageTitle()
         {

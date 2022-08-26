@@ -342,6 +342,7 @@
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/nunit.engine.api.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/nunit.engine.core.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/testcentric.engine.metadata.dll
+/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.dll.config
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.deps.json
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.runtimeconfig.json
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.runtimeconfig.dev.json
@@ -498,8 +499,6 @@
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/runtimes/win-x86/nativeassets/netcoreapp2.2/aspnetcorev2_inprocess.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/SeleniumFramework.csproj.AssemblyReference.cache
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/SeleniumFramework.GeneratedMSBuildEditorConfig.editorconfig
-/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/SeleniumFramework.AssemblyInfoInputs.cache
-/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/SeleniumFramework.AssemblyInfo.cs
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/SeleniumFramework.csproj.CoreCompileInputs.cache
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/SeleniumFramework.csproj.CopyComplete
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.dll
