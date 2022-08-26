@@ -24,7 +24,6 @@
   <ItemGroup>
     <None Remove="Selenium.WebDriver" />
     <None Remove="Utils\" />
-    <None Remove="Screenshots\" />
     <None Remove="Tests\" />
     <None Remove="PageObjects\" />
     <None Remove="PageImpl\" />
@@ -39,7 +38,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />
-    <Folder Include="Screenshots\" />
     <Folder Include="Tests\" />
     <Folder Include="PageObjects\" />
     <Folder Include="PageImpl\" />
