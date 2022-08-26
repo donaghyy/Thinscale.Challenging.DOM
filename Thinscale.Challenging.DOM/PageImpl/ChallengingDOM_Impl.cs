@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging.Console.Internal;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using ReportingLibrary;
+using SeleniumFramework.Utils;
 using SeleniumHelperLibrary;
 using Test;
 using Thinscale.Challenging.DOM.Utils;
