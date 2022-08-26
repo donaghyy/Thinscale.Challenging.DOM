@@ -17,14 +17,20 @@ namespace ReportingLibrary
         public ExtentTest test { get; set; }
         public Browsers browser { get; }
 
+        public ExtentV3HtmlReporter reporter2 { get; set; }
+
 
         public ExtentReportsHelper()
         {
             browser = new Browsers();
-            extent = new ExtentReports();      // /Users/daviddonaghy/Documents/GitHub/Challenging.DOM/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/" + DateTime.Now.ToString("MM_dd_yy" + " / " + "HH_mm_ss") + "_ExtentReport.HTML
-            reporter = new ExtentV3HtmlReporter(@"./Reports/index.html"); 
+
+            // Uncomment 1 for Online Reports or 2 for Local Reports
+
+            // Report that gets published to GitHub Pages
+            extent = new ExtentReports();
+            reporter = new ExtentV3HtmlReporter(@"./Reports/index.html");
             reporter.Config.ReportName = "Regression Testing";
-            reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Standard;
+            reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             extent.AttachReporter(reporter);
             extent.AddSystemInfo("Application Under Test", "Challenging DOM");
             extent.AddSystemInfo("Environment", "QA");
@@ -32,7 +38,18 @@ namespace ReportingLibrary
             extent.AddSystemInfo("OS", Environment.OSVersion.VersionString);
             extent.AddSystemInfo("BrowserPlatform", browser.browserPlatform);
 
-            
+            //// Save locally (to solution structure)
+            //reporter2 = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/" + DateTime.Now.ToString("MM_dd_yy" + " / " + "HH_mm_ss") + "_ExtentReport.HTML");
+            //reporter2.Config.ReportName = "Regression Testing";
+            //reporter2.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Standard;
+            //extent.AttachReporter(reporter2);
+            //extent.AddSystemInfo("Application Under Test", "Challenging DOM");
+            //extent.AddSystemInfo("Environment", "QA");
+            //extent.AddSystemInfo("Machine", Environment.MachineName);
+            //extent.AddSystemInfo("OS", Environment.OSVersion.VersionString);
+            //extent.AddSystemInfo("BrowserPlatform", browser.browserPlatform);
+
+
 
         }
 
