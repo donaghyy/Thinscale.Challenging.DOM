@@ -74,7 +74,7 @@ namespace Test
                     break;
             }
 
-            Console.WriteLine("\n" + "\n" + "___________________________________________________" + "\n");
+            Console.WriteLine("\n" + "\n" + "====================================================================" + "\n");
             extentReportsHelper.SetStepStatusPass("Browser started.");
             webDriver.Manage().Window.Maximize();
             extentReportsHelper.SetStepStatusPass("Browser maximized.");

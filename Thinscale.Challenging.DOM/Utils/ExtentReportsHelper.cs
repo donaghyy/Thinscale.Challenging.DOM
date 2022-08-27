@@ -38,6 +38,7 @@ namespace ReportingLibrary
             extent.AddSystemInfo("OS", Environment.OSVersion.VersionString);
             extent.AddSystemInfo("BrowserPlatform", browser.browserPlatform);
             extent.Stats.ChildPercentagePass.ToString();
+            
 
             //// Save locally (to solution structure)
             //reporter2 = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/" + DateTime.Now.ToString("MM_dd_yy" + " / " + "HH_mm_ss") + "_ExtentReport.HTML");
@@ -64,7 +65,7 @@ namespace ReportingLibrary
         public void SetStepStatusPass(string stepDescription) // Sets Test Step Status to PASS
         {
             test.Log(Status.Pass, stepDescription); // logs on html report
-            Console.WriteLine("Step Pass: " + stepDescription); // logs to console in realtime
+            Console.WriteLine("Step Passed: " + stepDescription); // logs to console in realtime
         }
 
 
