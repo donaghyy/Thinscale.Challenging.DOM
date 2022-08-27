@@ -13,11 +13,11 @@ namespace ReportingLibrary
     public class ExtentReportsHelper
     {
         public ExtentReports extent { get; set; }
-        public ExtentV3HtmlReporter reporter { get; set; }
+        public ExtentHtmlReporter reporter { get; set; }
         public ExtentTest test { get; set; }
         public Browsers browser { get; }
 
-        public ExtentV3HtmlReporter reporter2 { get; set; }
+        public ExtentHtmlReporter reporter2 { get; set; }
 
 
         public ExtentReportsHelper()
@@ -25,10 +25,10 @@ namespace ReportingLibrary
             browser = new Browsers();
 
             // Uncomment 1 for Online Reports or 2 for Local Reports
-
+            
             // Report that gets published to GitHub Pages
             extent = new ExtentReports();
-            reporter = new ExtentV3HtmlReporter(@"./Reports/index.html");
+            reporter = new ExtentHtmlReporter(@"./Reports/index.html");
             reporter.Config.ReportName = "Automated Testing";
             reporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             extent.AttachReporter(reporter);
