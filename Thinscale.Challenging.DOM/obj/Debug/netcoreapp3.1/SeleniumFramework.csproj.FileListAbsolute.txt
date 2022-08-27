@@ -342,7 +342,6 @@
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/nunit.engine.api.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/nunit.engine.core.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/testcentric.engine.metadata.dll
-/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.dll.config
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.deps.json
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.runtimeconfig.json
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.runtimeconfig.dev.json
@@ -435,9 +434,12 @@
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/SharpCompress.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/System.Drawing.Common.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/System.IO.Pipelines.dll
+/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/System.Security.Cryptography.Pkcs.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/System.Security.Permissions.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/System.Text.Encoding.CodePages.dll
+/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/System.Text.Encodings.Web.dll
+/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/System.Text.Json.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/de/Microsoft.TestPlatform.CoreUtilities.resources.dll

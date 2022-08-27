@@ -1,4 +1,6 @@
-﻿//SeleniumHelperLibrary.cs
+﻿using System;
+using System.Drawing;
+using System.IO;
 using OpenQA.Selenium;
 namespace SeleniumHelperLibrary
 {

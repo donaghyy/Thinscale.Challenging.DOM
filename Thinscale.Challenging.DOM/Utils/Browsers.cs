@@ -12,6 +12,7 @@ using Thinscale.Challenging.DOM.Utils;
 using Thinscale.Challenging.DOM;
 using Microsoft.Extensions.Configuration;
 
+
 namespace Test
 {
     public class Browsers
@@ -20,18 +21,14 @@ namespace Test
 
         public Browsers(ExtentReportsHelper reportsHelper)
         {
-            //baseURL = configuration["url"];  
-            //browser = configuration["browser"];
-            baseURL = "https://the-internet.herokuapp.com/challenging_dom";              
-            browser = "Firefox";
+            baseURL = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["url"];
+            browser = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["browser"];
             extentReportsHelper = reportsHelper;
         }
         public Browsers() // Overloading method so that variables can be used in ExtentReports without extentReportsHelper
         {
-            baseURL = "https://the-internet.herokuapp.com/challenging_dom";      
-            browser = "Firefox";
-            //baseURL = configuration["url"];
-            //browser = configuration["browser"];
+            baseURL = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["url"];
+            browser = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["browser"];
         }
 
         private IWebDriver webDriver;
@@ -44,33 +41,22 @@ namespace Test
             switch (browser)
             {
                 case "Chrome":
-                    
-                    ChromeOptions options = new ChromeOptions();
-                    options.AddArguments("--no-sandbox"); // Bypass OS security model
-                    options.AddArguments("--headless");
-                    options.AddArguments("disable-infobars"); // disabling infobars
-                    options.AddArguments("--disable-extensions"); // disabling extensions
-                    options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 
-                    webDriver = new ChromeDriver(options);
+                    Console.WriteLine("SELECTED BROWSER: " + browser);
+                    webDriver = new ChromeDriver(GetBrowserOptions(browser));
                     webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
-
                     break;
+
                 case "Firefox":
 
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    firefoxOptions.AddArguments("--no-sandbox"); // Bypass OS security model
-                    firefoxOptions.AddArguments("--headless");
-                    firefoxOptions.AddArguments("disable-infobars"); // disabling infobars
-                    firefoxOptions.AddArguments("--disable-extensions"); // disabling extensions
-                    firefoxOptions.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-
-                    webDriver = new FirefoxDriver(firefoxOptions);
+                    Console.WriteLine("SELECTED BROWSER: " + browser);
+                    webDriver = new FirefoxDriver(GetBrowserOptions(browser));
                     webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
-
                     break;
+
                 default:
-                    webDriver = new ChromeDriver();
+
+                    webDriver = new ChromeDriver(GetBrowserOptions(browser));
                     break;
             }
 
@@ -80,6 +66,31 @@ namespace Test
             extentReportsHelper.SetStepStatusPass("Browser maximized.");
             Goto(baseURL);
 
+        }
+
+        private dynamic GetBrowserOptions(string browser)
+        {
+            if (browser == "Chrome") {
+                var options = new ChromeOptions();
+                options.AddArguments("--no-sandbox"); // Bypass OS security model
+                options.AddArguments("--headless");
+                options.AddArguments("disable-infobars"); // disabling infobars
+                options.AddArguments("--disable-extensions"); // disabling extensions
+                options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                return options;
+            }
+            else if (browser == "Firefox") {
+                var options = new FirefoxOptions();
+                options.AddArguments("--no-sandbox"); // Bypass OS security model
+                options.AddArguments("--headless");
+                options.AddArguments("disable-infobars"); // disabling infobars
+                options.AddArguments("--disable-extensions"); // disabling extensions
+                options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                return options;
+            }
+
+            return new ChromeOptions();
+            
         }
 
         public string Title

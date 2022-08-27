@@ -23,7 +23,7 @@ namespace Thinscale.Challenging.DOM.Tests
         public void ValidateBlueButtonOperation()
         {
             Page.clickOnBlueButton();
-            extent.SetTestStatusSkipped();
+            //extent.SetTestStatusSkipped(); can you link [ignore] with .skip in extent?
 
         }
 
