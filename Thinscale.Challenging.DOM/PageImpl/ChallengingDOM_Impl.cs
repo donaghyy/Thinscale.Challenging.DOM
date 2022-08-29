@@ -36,6 +36,10 @@ namespace Thinscale.Challenging.DOM.PageImpl
             driver = webDriver;
         }
 
+        public void readExcel()
+        {
+            ExcelHelper.ReadExcelFile();
+        }
 
         public void verifyAnswerRefreshes()
         {

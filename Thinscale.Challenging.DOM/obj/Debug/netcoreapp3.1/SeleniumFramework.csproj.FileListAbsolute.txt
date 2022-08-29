@@ -519,3 +519,5 @@
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.dll
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/Thinscale.Challenging.DOM.pdb
 /Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/obj/Debug/netcoreapp3.1/SeleniumFramework.genruntimeconfig.cache
+/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/DocumentFormat.OpenXml.dll
+/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/bin/Debug/netcoreapp3.1/System.IO.Packaging.dll

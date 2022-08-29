@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using System.Text;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using OfficeOpenXml;
 
@@ -10,58 +13,74 @@ namespace SeleniumFramework.Utils
     public class ExcelHelper
 
     {
-        public ExcelHelper()
+        public static void ReadExcelFile()
         {
-            string file = "/Thinscale.Challenging.DOM/DemoData.xlsx";
-
-            using (ExcelPackage package = new ExcelPackage(new System.IO.FileInfo(file)))
+            try
             {
-                ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-                var sheet = package.Workbook.Worksheets["Data"]; // defining the sheet we are working from in excel
-
-                var entries = new ExcelHelper().GetList<expectedData>(sheet);
-            }
-     
-        }
-
-
-        private List<T> GetList<T>(ExcelWorksheet sheet)
-        {
-            List<T> list = new List<T>();
-
-            // first row is for knowing the properties of object
-            var columnInfo = Enumerable.Range(1, sheet.Dimension.Columns).ToList().Select(n =>
-
-                    new{Index=n, ColumnName=sheet.Cells[1,n].Value.ToString()}
-                );
-
-            for(int row=2; row<sheet.Dimension.Rows; row++)
-            {
-                T obj = (T)Activator.CreateInstance(typeof(T)); // generic object
-                foreach(var prop in typeof(T).GetProperties())
+                //Lets open the existing excel file and read through its content . Open the excel using openxml sdk
+                using (SpreadsheetDocument doc = SpreadsheetDocument.Open("./DemoData.xlsx", false))
                 {
-                    int col = columnInfo.SingleOrDefault(c => c.ColumnName == prop.Name).Index;
-                    var val = sheet.Cells[row, col].Value;
-                    var propType = prop.PropertyType;
-                    prop.SetValue(obj, Convert.ChangeType(val, propType));
+                    //create the object for workbook part  
+                    WorkbookPart workbookPart = doc.WorkbookPart;
+                    Sheets thesheetcollection = workbookPart.Workbook.GetFirstChild<Sheets>();
+                    StringBuilder excelResult = new StringBuilder();
 
+                    //using for each loop to get the sheet from the sheetcollection  
+                    foreach (Sheet thesheet in thesheetcollection)
+                    {
+                        excelResult.AppendLine("Excel Sheet Name : " + thesheet.Name);
+                        excelResult.AppendLine("----------------------------------------------- ");
+                        //statement to get the worksheet object by using the sheet id  
+                        Worksheet theWorksheet = ((WorksheetPart)workbookPart.GetPartById(thesheet.Id)).Worksheet;
 
+                        SheetData thesheetdata = (SheetData)theWorksheet.GetFirstChild<SheetData>();
+                        foreach (Row thecurrentrow in thesheetdata)
+                        {
+                            foreach (Cell thecurrentcell in thecurrentrow)
+                            {
+                                //statement to take the integer value  
+                                string currentcellvalue = string.Empty;
+                                if (thecurrentcell.DataType != null)
+                                {
+                                    if (thecurrentcell.DataType == CellValues.SharedString)
+                                    {
+                                        int id;
+                                        if (Int32.TryParse(thecurrentcell.InnerText, out id))
+                                        {
+                                            SharedStringItem item = workbookPart.SharedStringTablePart.SharedStringTable.Elements<SharedStringItem>().ElementAt(id);
+                                            if (item.Text != null)
+                                            {
+                                                //code to take the string value  
+                                                excelResult.Append(item.Text.Text + " ");
+                                            }
+                                            else if (item.InnerText != null)
+                                            {
+                                                currentcellvalue = item.InnerText;
+                                            }
+                                            else if (item.InnerXml != null)
+                                            {
+                                                currentcellvalue = item.InnerXml;
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    excelResult.Append(Convert.ToInt16(thecurrentcell.InnerText) + " ");
+                                }
+                            }
+                            excelResult.AppendLine();
+                        }
+                        excelResult.Append("");
+                        Console.WriteLine(excelResult.ToString());
+                        Console.ReadLine();
+                    }
                 }
-                list.Add(obj);
             }
+            catch (Exception)
+            {
 
-            return list;
-           
-        }
-
-        // Data structure for the excel
-        public class expectedData
-        {
-            public string expectedData1 { get; set; }
-            public string expectedData2 { get; set; }
-            public string expectedData3 { get; set; }
-            public string expectedData4 { get; set; }
-            public string expectedData5 { get; set; }
+            }
         }
     }
 }

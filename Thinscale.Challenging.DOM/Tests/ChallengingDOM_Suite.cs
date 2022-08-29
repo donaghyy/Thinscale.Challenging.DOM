@@ -16,6 +16,7 @@ namespace Thinscale.Challenging.DOM.Tests
         public void ValidatePageHeader()
         {
             Page.verifyPageHeader();
+            //Page.readExcel();
 
         }
 

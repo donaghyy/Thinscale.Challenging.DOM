@@ -39,6 +39,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.17.1, )"
+            },
             "DotNetSeleniumExtras.PageObjects": {
               "target": "Package",
               "version": "[3.11.0, )"

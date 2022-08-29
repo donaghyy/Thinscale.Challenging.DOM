@@ -41,7 +41,7 @@ namespace ReportingLibrary
             
 
             //// Save locally (to solution structure)
-            //reporter2 = new ExtentV3HtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/" + DateTime.Now.ToString("MM_dd_yy" + " / " + "HH_mm_ss") + "_ExtentReport.HTML");
+            //reporter2 = new ExtentHtmlReporter(@"/Users/daviddonaghy/Documents/GitHub/Thinscale.Challenging.DOM/Thinscale.Challenging.DOM/Reports/" + DateTime.Now.ToString("MM_dd_yy" + " / " + "HH_mm_ss") + "_ExtentReport.HTML");
             //reporter2.Config.ReportName = "Regression Testing";
             //reporter2.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Standard;
             //extent.AttachReporter(reporter2);
