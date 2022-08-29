@@ -35,6 +35,8 @@ namespace Thinscale.Challenging.DOM.PageObjects
 
         public static string deleteButtonRow1 = "//div[@class=\"large-10 columns\"]/table/tbody/tr[6]/td[7]/a[2]";
 
+        public static string answerField = "//div[@id=\"content\"]/script";
+
 
     }
 }

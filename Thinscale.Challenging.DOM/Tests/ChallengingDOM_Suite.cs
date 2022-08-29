@@ -71,10 +71,10 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test, Category("Static_Elements")]
-        [Ignore("Not Implemented Yet")]
+        //[Ignore("Not Implemented Yet")]
         public void ValidateAnswerFieldRefreshes()
         {
-
+            Page.verifyAnswerRefreshes();
         }
 
         [Test, Category("Static_Elements")]

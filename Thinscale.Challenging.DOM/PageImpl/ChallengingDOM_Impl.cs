@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Threading;
 using AventStack.ExtentReports;
 using Microsoft.Extensions.Logging.Console.Internal;
@@ -36,13 +37,41 @@ namespace Thinscale.Challenging.DOM.PageImpl
         }
 
 
-
-
-
         public void verifyAnswerRefreshes()
         {
+            string ansOne = returnAnswerAsString();
+
+            driver.Navigate().Refresh();
+
+            string ansTwo = returnAnswerAsString();
+
+            Assert.IsTrue(ansOne != ansTwo, "Answer field is the same!");
+        }
 
 
+        public string returnAnswerAsString()
+        {
+
+            elementFetch = new ElementFetch();
+            var answerField = elementFetch.getWebElement("XPATH", PageObjects.ChallengingDOM_Objects.answerField, driver);
+            string answerfieldTxt = answerField.GetAttribute("innerHTML");
+
+
+            string sentence = answerfieldTxt;
+            string pattern = @"Answer:\s(\d+)";
+
+                foreach (Match match in Regex.Matches(sentence, pattern))
+                {
+                    if (match.Success && match.Groups.Count > 0)
+                    {
+                        answerfieldTxt = match.Groups[1].Value;
+                        _extentReportsHelper.LogInfo("Answer is: " + answerfieldTxt);
+                    }
+                }
+                
+
+
+            return answerfieldTxt;
 
         }
 
@@ -153,7 +182,7 @@ namespace Thinscale.Challenging.DOM.PageImpl
             String expectedValue2 = "Ipsum";
             String expectedValue3 = "Dolor";
             String expectedValue4 = "Sit";
-            String expectedValue5 = "Ammet"; 
+            String expectedValue5 = "Amet"; 
             String expectedValue6 = "Diceret";
             String expectedValue7 = "Action";
 
