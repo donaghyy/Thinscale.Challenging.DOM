@@ -46,12 +46,12 @@ namespace Thinscale.Challenging.DOM.PageImpl
             string ansOne = returnAnswerAsString();
 
             driver.Navigate().Refresh();
+            _extentReportsHelper.LogInfo("Page refreshed.");
 
             string ansTwo = returnAnswerAsString();
 
             Assert.IsTrue(ansOne != ansTwo, "Answer field is the same!");
         }
-
 
         public string returnAnswerAsString()
         {
@@ -78,9 +78,6 @@ namespace Thinscale.Challenging.DOM.PageImpl
             return answerfieldTxt;
 
         }
-
-
-
 
         public void verifyDeleteButton()
         {
@@ -135,35 +132,35 @@ namespace Thinscale.Challenging.DOM.PageImpl
 
             _extentReportsHelper.test.Log(Status.Info, "Elements aquired, running assertions...");
 
-            Assert.AreEqual(tableColumn1_text, expectedValue1, "Table column 1 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 1 as expected: " + tableColumn1_text);
+            Assert.AreEqual(tableColumn1_text, expectedValue1, "Table column 1, row 1  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 1 as expected: " + tableColumn1_text);
 
-            Assert.AreEqual(tableColumn2_text, expectedValue2, "Table column 2 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 2 as expected: " + tableColumn2_text);
+            Assert.AreEqual(tableColumn2_text, expectedValue2, "Table column 1, row 2  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 2  as expected: " + tableColumn2_text);
 
-            Assert.AreEqual(tableColumn3_text, expectedValue3, "Table column 3 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 3 as expected: " + tableColumn3_text);
+            Assert.AreEqual(tableColumn3_text, expectedValue3, "Table column 1, row 3  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 3  as expected: " + tableColumn3_text);
 
-            Assert.AreEqual(tableColumn4_text, expectedValue4, "Table column 4 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 4 as expected: " + tableColumn4_text);
+            Assert.AreEqual(tableColumn4_text, expectedValue4, "Table column 1, row 4  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 4  as expected: " + tableColumn4_text);
 
-            Assert.AreEqual(tableColumn5_text, expectedValue5, "Table column 5 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 5 as expected: " + tableColumn5_text);
+            Assert.AreEqual(tableColumn5_text, expectedValue5, "Table column 4, row 5  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 5  as expected: " + tableColumn5_text);
 
-            Assert.AreEqual(tableColumn6_text, expectedValue6, "Table column 6 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 6 as expected: " + tableColumn6_text);
+            Assert.AreEqual(tableColumn6_text, expectedValue6, "Table column 1, row 6  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 6  as expected: " + tableColumn6_text);
 
-            Assert.AreEqual(tableColumn7_text, expectedValue7, "Table column 7 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 7 as expected: " + tableColumn7_text);
+            Assert.AreEqual(tableColumn7_text, expectedValue7, "Table column 1, row 7  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 7  as expected: " + tableColumn7_text);
 
-            Assert.AreEqual(tableColumn8_text, expectedValue8, "Table column 8 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 8 as expected: " + tableColumn8_text);
+            Assert.AreEqual(tableColumn8_text, expectedValue8, "Table column 1, row 8  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 8  as expected: " + tableColumn8_text);
 
-            Assert.AreEqual(tableColumn9_text, expectedValue9, "Table column 9 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 9 as expected: " + tableColumn9_text);
+            Assert.AreEqual(tableColumn9_text, expectedValue9, "Table column 1, row 9  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 9  as expected: " + tableColumn9_text);
 
-            Assert.AreEqual(tableColumn10_text, expectedValue10, "Table column 10 doesnt match!" + "\n");
-            _extentReportsHelper.SetStepStatusPass("Table column 10 as expected: " + tableColumn10_text);
+            Assert.AreEqual(tableColumn10_text, expectedValue10, "Table column 1, row 10  doesnt match!" + "\n");
+            _extentReportsHelper.SetStepStatusPass("Table column 1, row 10  as expected: " + tableColumn10_text);
 
         }
 

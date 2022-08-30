@@ -16,7 +16,6 @@ namespace Thinscale.Challenging.DOM.Tests
         public void ValidatePageHeader()
         {
             Page.verifyPageHeader();
-            //Page.readExcel();
 
         }
 
@@ -24,7 +23,6 @@ namespace Thinscale.Challenging.DOM.Tests
         public void ValidateBlueButtonOperation()
         {
             Page.clickOnBlueButton();
-            //extent.SetTestStatusSkipped(); can you link [ignore] with .skip in extent?
 
         }
 
@@ -44,35 +42,30 @@ namespace Thinscale.Challenging.DOM.Tests
         }
 
         [Test, Category("Static_Elements")]
-        //[Ignore("x")]
         public void ValidateStaticTableHeader()
         {
             Page.verifyTableHeaders();
         }
 
         [Test, Category("Static_Elements")]
-        //[Ignore("x")]
         public void ValidateRandomTableCollumn()
         {
             Page.verifyTableColumns();
         }
 
         [Test, Category("Buttons")]
-        //[Ignore("x")]
         public void ValidateRandomEditButton()
         {
             Page.verifyEditButton();
         }
 
         [Test, Category("Buttons")]
-        //[Ignore("x")]
         public void ValidateRandomDeleteButton()
         {
             Page.verifyDeleteButton();
         }
 
         [Test, Category("Static_Elements")]
-        //[Ignore("Not Implemented Yet")]
         public void ValidateAnswerFieldRefreshes()
         {
             Page.verifyAnswerRefreshes();
