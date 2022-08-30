@@ -16,9 +16,7 @@ using Microsoft.Extensions.Configuration;
 namespace Test
 {
     public class Browsers
-    {
-       // IConfiguration configuration;
-
+    { 
         public Browsers(ExtentReportsHelper reportsHelper)
         {
             baseURL = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("AppSettings")["url"];
